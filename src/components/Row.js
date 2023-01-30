@@ -18,8 +18,6 @@ useEffect(() => {
     fetchData();
 }, [fetchURL]);
 
-console.log(movies)
-
   return (
   <div className='row'>
     <h2>{title}</h2>
@@ -38,7 +36,8 @@ console.log(movies)
                             isLargeRow ? movie.poster_path : movie.backdrop_path 
                             ||
                             !isLargeRow ? movie.poster_path : movie.backdrop_path
-                        }`}
+                        }`} 
+                        
                         alt={movie.name ? movie.name : movie.title}
                         onMouseEnter={() => setIsHovering(true)}
                         onMouseLeave={() => setIsHovering(false)}
